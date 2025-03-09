@@ -1,0 +1,14 @@
+<p>Count: {{ count }}</p>
+<p>
+    <button (click)="icrement()">Increment</button>
+</p>
+
+<p>
+    <input (keyup)="getInput($event)" >
+</p>
+
+<p>
+    Two way binding: 
+    <input [(ngModel)]="address" placeholder="Enter your address">
+    Hello, {{ address }}
+</p>
