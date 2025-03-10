@@ -4,6 +4,9 @@ import { FirstComponent } from './first/first.component';
 import { ContactComponent } from './contact/contact.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { DirectiveExpComponent } from './directive-exp/directive-exp.component';
+import { MouseComponent } from './mouse/mouse.component';
+import { DragComponent } from './drag/drag.component';
 
 export const routes: Routes = [
     {
@@ -20,5 +23,14 @@ export const routes: Routes = [
     },
     {
         path: 'dataBinding', component: DataBindingComponent
+    },
+    {
+        path: 'directive', component: DirectiveExpComponent
+    },
+    {
+        path: 'mouseEvents', component: MouseComponent
+    },
+    {
+        path: 'dragEvents', component: DragComponent
     }
 ];

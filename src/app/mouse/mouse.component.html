@@ -1,0 +1,13 @@
+<div class="event-box" 
+     (click)="onClick()"
+     (dblclick)="onDoubleClick()"
+     (mousedown)="onMouseDown()"
+     (mouseup)="onMouseUp()"
+     (mouseenter)="onMouseEnter()"
+     (mouseleave)="onMouseLeave()"   
+     (mousemove)="onMouseMove($event)">
+    Move your mouse or click here
+</div>
+
+<p>{{ message }}</p>
+<p>{{ coordinates }}</p>
