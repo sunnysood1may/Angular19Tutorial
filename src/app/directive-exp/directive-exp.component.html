@@ -1,0 +1,24 @@
+<button (click)="show = !show">Toggle Message</button>
+
+<p *ngIf="show">Hello, this is visible now!</p>
+
+<ul>
+    <li *ngFor="let item of items">{{ item }}</li>
+</ul>
+
+<p [ngSwitch]="selectedColor">
+    <span *ngSwitchCase="'red'" style="color: red;">Red Color</span>
+    <span *ngSwitchCase="'blue'" style="color: blue;">Blue Color</span>
+    <span *ngSwitchCase="'green'" style="color: green;">Green Color</span>
+    <span *ngSwitchDefault>No color selected</span>
+</p>
+
+<button (click)="isActive = !isActive">Toggle Class</button>
+<p [ngClass]="{'active-class': isActive}">This text changes color</p>
+{{ isActive }} <br />
+
+
+<button (click)="isLarge = !isLarge">Toggle Size</button>
+<p [ngStyle]="{'font-size': isLarge ? '24px' : '16px'}">Dynamic Font Size</p>
+
+<p appHighlight>Hover over me to see the effect</p>
