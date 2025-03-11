@@ -1,1 +1,57 @@
-<p>about works!</p>
+<h3>Toggle Example: Show/Hide Div on Button Click</h3>
+<div *ngIf="isVisible; else elseB" class="box">This content is visible!</div>
+<ng-template #elseB>
+  <div class="box">Content is hidden!</div>
+</ng-template>
+
+<div style="text-align: center">
+  <button (click)="toggleDiv()">Toggle</button>&nbsp;
+  <button (click)="toggleDiv()">
+    {{ isVisible ? "Hide" : "Show" }} Content
+  </button>
+</div>
+<hr />
+
+<h3>ElseIf Conditions Angular</h3>
+<div style="text-align: center">
+  <input [value]="color" [(ngModel)]="color" />&nbsp; @if (color == 'red') {
+  <span style="color: red">Red color</span>
+  } @else if (color == 'yellow') {
+  <span style="color: yellow">Yellow color</span>
+  } @else if (color == 'blue') {
+  <span style="color: blue">Blue color</span>
+  } @else {
+  <span>No Color</span>
+  }
+</div>
+<hr />
+
+<h2>Using ngSwitch in Angular 19</h2>
+<div style="text-align: center">
+  <button (click)="changeFruit('apple')">Apple</button>
+  <button (click)="changeFruit('banana')">Banana</button>
+  <button (click)="changeFruit('mango')">Mango</button>
+  <button (click)="changeFruit('')">Reset</button>&nbsp;
+  <input [value]="selectedFruit" [(ngModel)]="selectedFruit" />
+
+  <ng-container [ngSwitch]="selectedFruit">
+    <span *ngSwitchCase="'apple'">🍎 You selected an Apple!</span>
+    <span *ngSwitchCase="'banana'">🍌 You selected a Banana!</span>
+    <span *ngSwitchCase="'mango'">🥭 You selected a Mango!</span>
+    <span *ngSwitchDefault>❓ No fruit selected!</span>
+  </ng-container>
+</div>
+<hr />
+
+<h2>Using ngSwitch in Angular 19</h2>
+<h2>Student List</h2>
+<ul>
+  <li *ngFor="let student of students; let i = index">
+    {{ i + 1 }}. {{ student.name }} - Age: {{ student.age }}
+  </li>
+</ul>
+
+<h2>Track By: Improves performance by tracking unique identifiers.</h2>
+<li *ngFor="let student of students; trackBy: trackByStudentId">
+  {{ student.name }} - Age: {{ student.age }}
+</li>
