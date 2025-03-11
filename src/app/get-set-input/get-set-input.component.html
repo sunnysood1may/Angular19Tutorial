@@ -1,0 +1,25 @@
+<h2>Template Reference Variable</h2>
+<input #myInput type="text" placeholder="Enter your name">
+<button (click)="getValue(myInput.value)">Get Value</button>
+<button (click)="setValue(myInput)">Set Value</button>
+<p>Value: {{ inputValue }}</p>
+
+<h2>Two-Way Data Binding</h2>
+<input [(ngModel)]="name" placeholder="Enter your name">
+<button (click)="setName()">Set Value</button>
+<p>Value: {{ name }}</p>
+
+<h2>Reactive Forms</h2>
+<input [formControl]="nameControl" placeholder="Enter your name">
+<button (click)="setRValue()">Set Value</button>
+<button (click)="getRValue()">Get Value</button>
+<p>Value: {{ nameControl.value }}</p>
+
+<h2>(input) Event Example</h2>
+<input type="text" (input)="getEName($event)" placeholder="Enter your name">
+<button (click)="setName()">Set Value</button>
+<p>Value: {{ name }}</p>
+
+
+
+
