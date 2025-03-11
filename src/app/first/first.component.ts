@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { CounterComponent } from '../counter/counter.component';
 
 @Component({
   selector: 'app-first',
-  imports: [],
+  imports: [CounterComponent],
   templateUrl: './first.component.html',
   styleUrl: './first.component.css'
 })

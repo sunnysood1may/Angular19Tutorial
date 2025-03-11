@@ -9,6 +9,7 @@ import { MouseComponent } from './mouse/mouse.component';
 import { DragComponent } from './drag/drag.component';
 import { StyleCssComponent } from './style-css/style-css.component';
 import { DataTypesComponent } from './data-types/data-types.component';
+import { GetSetInputComponent } from './get-set-input/get-set-input.component';
 
 export const routes: Routes = [
     {
@@ -40,5 +41,8 @@ export const routes: Routes = [
     },
     {
         path: 'dataType', component: DataTypesComponent
+    },
+    {
+        path: 'getSetInput', component: GetSetInputComponent
     }
 ];
