@@ -7,6 +7,8 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectiveExpComponent } from './directive-exp/directive-exp.component';
 import { MouseComponent } from './mouse/mouse.component';
 import { DragComponent } from './drag/drag.component';
+import { StyleCssComponent } from './style-css/style-css.component';
+import { DataTypesComponent } from './data-types/data-types.component';
 
 export const routes: Routes = [
     {
@@ -32,5 +34,11 @@ export const routes: Routes = [
     },
     {
         path: 'dragEvents', component: DragComponent
+    },
+    {
+        path: 'styleCSS', component: StyleCssComponent
+    },
+    {
+        path: 'dataType', component: DataTypesComponent
     }
 ];
