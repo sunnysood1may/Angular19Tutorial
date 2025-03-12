@@ -1,0 +1,21 @@
+<h1>Counter: {{ count() }}</h1>
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">Decrement</button>
+<h2>Double: {{ doubleCount() }}</h2>
+
+<p>(String Example) Message: {{ message() }}</p>
+<button (click)="updateMessage()">Update Message</button>
+
+<p>(Number) Counter: {{ counter() }}</p>
+<button (click)="incrementC()">Increment</button>
+
+<p>(Array) Items: {{ items() }}</p>
+<button (click)="addItem()">Add Item</button>
+
+<p>(Object Signal) Name: {{ user().name }}</p>
+<p>Age: {{ user().age }}</p>
+<button (click)="updateAge()">Increase Age</button>
+
+<p>(Custom Types with Signals) Product: {{ product().name }}</p>
+<p>Price: ${{ product().price }}</p>
+<button (click)="updatePrice()">Increase Price</button>
