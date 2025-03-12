@@ -11,42 +11,62 @@ import { StyleCssComponent } from './style-css/style-css.component';
 import { DataTypesComponent } from './data-types/data-types.component';
 import { GetSetInputComponent } from './get-set-input/get-set-input.component';
 import { SignalsComponent } from './signals/signals.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DetailsComponent } from './details/details.component';
 
 export const routes: Routes = [
-    {
-        path: '', component: FirstComponent
-    },
-    {
-        path: 'about', component: AboutComponent
-    },
-    {
-        path: 'contact', component: ContactComponent
-    },
-    {
-        path: 'interpolation', component: InterpolationComponent
-    },
-    {
-        path: 'dataBinding', component: DataBindingComponent
-    },
-    {
-        path: 'directive', component: DirectiveExpComponent
-    },
-    {
-        path: 'mouseEvents', component: MouseComponent
-    },
-    {
-        path: 'dragEvents', component: DragComponent
-    },
-    {
-        path: 'styleCSS', component: StyleCssComponent
-    },
-    {
-        path: 'dataType', component: DataTypesComponent
-    },
-    {
-        path: 'getSetInput', component: GetSetInputComponent
-    },
-    {
-        path: 'signals', component: SignalsComponent
-    }
+  {
+    path: '',
+    component: FirstComponent,
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+  },
+  {
+    path: 'interpolation',
+    component: InterpolationComponent,
+  },
+  {
+    path: 'dataBinding',
+    component: DataBindingComponent,
+  },
+  {
+    path: 'directive',
+    component: DirectiveExpComponent,
+  },
+  {
+    path: 'mouseEvents',
+    component: MouseComponent,
+  },
+  {
+    path: 'dragEvents',
+    component: DragComponent,
+  },
+  {
+    path: 'styleCSS',
+    component: StyleCssComponent,
+  },
+  {
+    path: 'dataType',
+    component: DataTypesComponent,
+  },
+  {
+    path: 'getSetInput',
+    component: GetSetInputComponent,
+  },
+  {
+    path: 'signals',
+    component: SignalsComponent,
+  },
+  { path: 'details/:id', component: DetailsComponent },
+  { path: 'details', component: DetailsComponent },
+
+  // Wildcard route for 404 page
+  { path: '**', component: PageNotFoundComponent },
+  
 ];
