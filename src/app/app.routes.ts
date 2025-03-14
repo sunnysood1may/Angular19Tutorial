@@ -13,6 +13,7 @@ import { GetSetInputComponent } from './get-set-input/get-set-input.component';
 import { SignalsComponent } from './signals/signals.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DetailsComponent } from './details/details.component';
+import { PipeTutorialComponent } from './pipe-tutorial/pipe-tutorial.component';
 
 export const routes: Routes = [
   {
@@ -65,6 +66,10 @@ export const routes: Routes = [
   },
   { path: 'details/:id', component: DetailsComponent },
   { path: 'details', component: DetailsComponent },
+  {
+    path: 'pipes',
+    component: PipeTutorialComponent,
+  },
 
   // Wildcard route for 404 page
   { path: '**', component: PageNotFoundComponent },

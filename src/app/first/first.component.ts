@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CounterComponent } from '../counter/counter.component';
 import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-first',
@@ -10,11 +11,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './first.component.html',
   styleUrl: './first.component.css'
 })
-export class FirstComponent {
+export class FirstComponent implements OnInit {
   title = "First Component Load";
 
   constructor(private router: Router, private dataService: DataService) {
     this.saveToStorage();
+    this.greeting = this.dataService.getGreeting('Sunny');
   }
 
   goToDetails(id: number) {
@@ -37,6 +39,24 @@ export class FirstComponent {
     this.dataService.changeData('Updated Data from Home');
     this.router.navigate(['/details']);
   }
+
+  users: any[] = [];
+  user: any;
+  greeting: string | undefined;
+
+  ngOnInit(): void {
+    this.users = this.dataService.getUsers();
+  }
+
+  addNewUser(){
+    const newUser = { id: 3, name: 'Alice Johnson', age: 28 };
+    this.dataService.addUser(newUser);
+    this.users = this.dataService.getUsers(); // Refreshing the list
+  }
+
+ 
+
+  
   
   
 }

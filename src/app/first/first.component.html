@@ -5,4 +5,15 @@
   <button (click)="goToDetails2()">Go to Details2</button>&nbsp;&nbsp;
   <button (click)="goToDetails3()">Go to Details3</button>&nbsp;&nbsp;
   <button (click)="updateData()">Update Data</button>
+  <h1>{{ greeting }}</h1>
+
+  <h2>User List</h2>
+  <ul *ngFor="let user of users">
+    <li>
+      {{ user.name }} ({{ user.age }} years old)
+    </li>
+  </ul>
+
+  <button (click)="addNewUser()">Add User</button>
+
 </div>
