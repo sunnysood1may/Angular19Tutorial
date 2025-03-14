@@ -34,23 +34,34 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="directive">Directive</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="mouseEvents">MouseEvents</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="dragEvents">dragEvents</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="styleCSS">StyleCSS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="dataType">DataTypes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="getSetInput">GetSetInput</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="signals">Signals</a>
+
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Dropdown link
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" routerLink="mouseEvents">MouseEvents</a>
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="dragEvents">dragEvents</a>
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="styleCSS">StyleCSS</a>
+          </li>
+          <li><a class="dropdown-item" routerLink="dataType">DataTypes</a></li>
+          <li>
+            <a class="dropdown-item" routerLink="getSetInput">GetSetInput</a>
+          </li>
+          <li><a class="dropdown-item" routerLink="signals">Signals</a></li>
+          <li><a class="dropdown-item" routerLink="pipes">Pipes</a></li>
+        </ul>
       </li>
     </ul>
   </div>

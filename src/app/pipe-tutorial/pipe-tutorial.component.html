@@ -1,0 +1,21 @@
+<div style="text-align: center">
+  <h2>Angular Pipes Example</h2>
+  <p>Uppercase: {{ "hello world" | uppercase }}</p>
+  <p>Lowercase: {{ "HELLO WORLD" | lowercase }}</p>
+  <p>Date: {{ currentDate | date : "fullDate" }}</p>
+  <p>Currency: {{ amount | currency : "INR" }}</p>
+  <p>Percent: {{ 0.25 | percent }}</p>
+  <p>Decimal: {{ 3.14153 | number : "1.2-4" }}</p>
+  <p>Slice: {{ message | slice : 0 : 5 }}</p>
+  <p>JSON: {{ person | json }}</p>
+
+  <p>Truncated Text: {{ message | truncate:10 }}</p>
+
+  <!--<h3>Impure Pipe Example - Filter List</h3>
+    <input type="text" [(ngModel)]="searchText" placeholder="Search name">
+    <p>{{ searchText }}</p>
+    <ul>
+      <li *ngFor="let name of names | filter:searchText">{{ name }}</li>
+    </ul>-->
+
+</div>
