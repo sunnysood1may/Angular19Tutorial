@@ -1,15 +1,22 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 interface IUser { id: number, name: string, age: number }
+export interface IPost {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  
 
+  constructor(private http: HttpClient){}
+  
   private data = new BehaviorSubject<string>('Default Data');
   currentData = this.data.asObservable();
 
@@ -34,6 +41,11 @@ export class DataService {
     this.users.push(user);
   }
 
-  
+  getPosts(){
+    return this.http.get<IPost[]>("https://jsonplaceholder.typicode.com/posts");
+  }
+
 
 }
+
+
