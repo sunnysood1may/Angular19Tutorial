@@ -14,6 +14,7 @@ import { SignalsComponent } from './signals/signals.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DetailsComponent } from './details/details.component';
 import { PipeTutorialComponent } from './pipe-tutorial/pipe-tutorial.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 export const routes: Routes = [
   {
@@ -69,6 +70,10 @@ export const routes: Routes = [
   {
     path: 'pipes',
     component: PipeTutorialComponent,
+  },
+  {
+    path: 'userLists',
+    component: UserListComponent,
   },
 
   // Wildcard route for 404 page

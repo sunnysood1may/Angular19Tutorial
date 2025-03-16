@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CounterComponent } from '../counter/counter.component';
 import { Router } from '@angular/router';
-import { DataService } from '../services/data.service';
+import { DataService, IPost } from '../services/data.service';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-first',
@@ -44,8 +44,11 @@ export class FirstComponent implements OnInit {
   user: any;
   greeting: string | undefined;
 
+  posts$!: Observable<IPost[]>;
+
   ngOnInit(): void {
     this.users = this.dataService.getUsers();
+    this.posts$ = this.dataService.getPosts();
   }
 
   addNewUser(){

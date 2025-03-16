@@ -13,7 +13,17 @@
       {{ user.name }} ({{ user.age }} years old)
     </li>
   </ul>
-
   <button (click)="addNewUser()">Add User</button>
+  
+  <h2>Posts</h2>
+  <table border="1" align="center">
+    @for ( post of posts$ | async; track post.title ){
+      <tr style="border: 1px solid grey;">
+        <td>{{ post. userId }}</td>
+        <td>{{ post. id }}</td>
+        <td>{{ post. title }}</td>
+      </tr>
+    }
+  </table>
 
 </div>

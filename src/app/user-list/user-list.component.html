@@ -1,0 +1,9 @@
+<h2>User List</h2>
+<h3>{{ message }}</h3>
+<button (click)="callChildMethod()">Call Child Method</button>
+
+<input (input)="updateName($event)" placeholder="Update Name">
+
+<app-user-details [user]="selectedUser" (userUpdated)="showChildMessage($event)"></app-user-details>
+
+
