@@ -15,6 +15,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { DetailsComponent } from './details/details.component';
 import { PipeTutorialComponent } from './pipe-tutorial/pipe-tutorial.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { LifeHooksComponent } from './life-hooks/life-hooks.component';
 
 export const routes: Routes = [
   {
@@ -74,6 +75,10 @@ export const routes: Routes = [
   {
     path: 'userLists',
     component: UserListComponent,
+  },
+  {
+    path: 'lifeCycleHooks',
+    component: LifeHooksComponent,
   },
 
   // Wildcard route for 404 page

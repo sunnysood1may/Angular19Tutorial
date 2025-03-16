@@ -19,3 +19,8 @@ export interface AppConfig {
 
 export const APP_CONFIG = new InjectionToken<AppConfig>('app.config');
 
+export const API_URL = new InjectionToken<string>('API_URL');
+
+export function apiUrlFactory(): string {
+  return 'https://api.example.com';
+}
