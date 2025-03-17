@@ -16,6 +16,8 @@ import { DetailsComponent } from './details/details.component';
 import { PipeTutorialComponent } from './pipe-tutorial/pipe-tutorial.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { LifeHooksComponent } from './life-hooks/life-hooks.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 export const routes: Routes = [
   {
@@ -79,6 +81,14 @@ export const routes: Routes = [
   {
     path: 'lifeCycleHooks',
     component: LifeHooksComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
   },
 
   // Wildcard route for 404 page

@@ -1,0 +1,22 @@
+<div style="text-align: center;">
+<h2>Reactive Registration Form</h2>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name" />
+    <div *ngIf="userForm.controls['name'].invalid && userForm.controls['name'].touched">
+      Name is required and should be at least 3 characters long.
+    </div>
+
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" />
+    <div *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched">
+      Please enter a valid email.
+    </div>
+
+    <button type="submit" [disabled]="userForm.invalid">Submit</button>
+  </form>
+
+  <p>Form Submitted! Data: {{ userForm.value | json }}</p>
+
+</div>
