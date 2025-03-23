@@ -1,0 +1,22 @@
+<div *ngIf="user" class="edit-form">
+  <form #editForm="ngForm" (ngSubmit)="onSubmit(editForm)">
+    <h2>Edit User: {{ user.first_name }} {{ user.last_name }}</h2>
+    <img [src]="user.avatar" alt="User Avatar" width="100" height="100" />
+    <p><strong>Email:</strong> {{ user.email }}</p>
+  
+    <div>
+      <label>First Name: </label>
+      <input [(ngModel)]="user.first_name" placeholder="First Name" />
+    </div>
+    <div>
+      <label>Last Name: </label>
+      <input [(ngModel)]="user.last_name" placeholder="Last Name" />
+    </div>
+    <div>
+      <label>Email: </label>
+      <input [(ngModel)]="user.email" placeholder="Email" />
+    </div>
+    <button class="btn btn-success">Save</button>
+  </form>
+</div>
+  

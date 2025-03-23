@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { UserService } from '../services/user.service';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-details',
@@ -23,12 +25,17 @@ export class UserDetailsComponent implements OnInit {
 
   userName!: string;
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
     this.userService.currentUserName.subscribe(name => {
       this.userName = name;
     });
+  }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/login']);
   }
 
 }

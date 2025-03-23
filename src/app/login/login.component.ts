@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 interface IUser {
   name: string;
@@ -22,10 +24,16 @@ export class LoginComponent {
     password: ''
   };
 
+  constructor(private authService: AuthService, private router: Router){ }
+
 
   onSubmit(form: any) {
     console.log('Form Submitted!', form.value);
     alert('Registration Successful!');
+
+    this.authService.login();
+    this.router.navigate(['/userLists']);
+    
   }
 
 }

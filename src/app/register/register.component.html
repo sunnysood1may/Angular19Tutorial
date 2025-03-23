@@ -6,17 +6,22 @@
     <input id="name" formControlName="name" />
     <div *ngIf="userForm.controls['name'].invalid && userForm.controls['name'].touched">
       Name is required and should be at least 3 characters long.
-    </div>
+    </div> <br /><br />
 
     <label for="email">Email:</label>
     <input id="email" formControlName="email" />
     <div *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched">
       Please enter a valid email.
-    </div>
+    </div> <br /><br />
 
     <button type="submit" [disabled]="userForm.invalid">Submit</button>
   </form>
 
   <p>Form Submitted! Data: {{ userForm.value | json }}</p>
+
+  <p>pristine: {{ userForm.pristine}}</p>
+  <p>dirty: {{ userForm.dirty}}</p>
+  <p>touched: {{ userForm.touched}}</p>
+  <p>untouched: {{ userForm.untouched}}</p>
 
 </div>
