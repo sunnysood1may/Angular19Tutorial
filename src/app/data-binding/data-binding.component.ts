@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LifeHooksComponent } from '../life-hooks/life-hooks.component';
 
@@ -10,12 +10,18 @@ import { LifeHooksComponent } from '../life-hooks/life-hooks.component';
 })
 export class DataBindingComponent {
 
-  count = 0;
+  constructor(private cdr: ChangeDetectorRef) {}
 
+  count = 0;
   address = "Delhi";
 
   icrement(){
-    this.count++;
+    //this.count++;
+
+    setTimeout(() => {
+      this.count++;
+      this.cdr.detectChanges();  // Manually trigger change detection
+    }, 1000);
   }
 
   getInput(event: KeyboardEvent){

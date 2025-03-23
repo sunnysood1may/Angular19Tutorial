@@ -18,6 +18,11 @@ import { UserListComponent } from './user-list/user-list.component';
 import { LifeHooksComponent } from './life-hooks/life-hooks.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AnimationComponent } from './animation/animation.component';
+import { AuthGuardService } from './services/guards/auth-guard.service';
+import { SessTutComponent } from './sess-tut/sess-tut.component';
+import { CrudComponent } from './crud/crud.component';
+import { EditUserComponent } from './crud/edit-user/edit-user.component';
 
 export const routes: Routes = [
   {
@@ -76,7 +81,7 @@ export const routes: Routes = [
   },
   {
     path: 'userLists',
-    component: UserListComponent,
+    component: UserListComponent, canActivate: [AuthGuardService]
   },
   {
     path: 'lifeCycleHooks',
@@ -90,6 +95,19 @@ export const routes: Routes = [
     path: 'register',
     component: RegisterComponent,
   },
+  {
+    path: 'animation',
+    component: AnimationComponent,
+  },
+  {
+    path: 'sessionTutorial',
+    component: SessTutComponent,
+  },
+  {
+    path: 'crud',
+    component: CrudComponent,
+  },
+  { path: 'user/edit/:id', component: EditUserComponent },
 
   // Wildcard route for 404 page
   { path: '**', component: PageNotFoundComponent },
