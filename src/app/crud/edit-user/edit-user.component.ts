@@ -30,8 +30,12 @@ export class EditUserComponent implements OnInit{
     const userId = this.route.snapshot.params['id'];
 
     this.service.getUser(userId).subscribe((res)=>{
-      this.user = res.data;
+      //this.user = res.data;
     })
+  }
+
+  onSubmit(event: any){
+
   }
 
 }

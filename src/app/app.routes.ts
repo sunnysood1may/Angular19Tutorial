@@ -23,6 +23,7 @@ import { AuthGuardService } from './services/guards/auth-guard.service';
 import { SessTutComponent } from './sess-tut/sess-tut.component';
 import { CrudComponent } from './crud/crud.component';
 import { EditUserComponent } from './crud/edit-user/edit-user.component';
+import { CustomComponent } from './custom/custom/custom.component';
 
 export const routes: Routes = [
   {
@@ -32,6 +33,10 @@ export const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
+  },
+  {
+    path: 'custom',
+    component: CustomComponent,
   },
   {
     path: 'contact',
